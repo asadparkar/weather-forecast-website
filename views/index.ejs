@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <!-- IMPORTING THE CSS FILES -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/c7712fda9c.js" crossorigin="anonymous"></script>
+    <!-- IMPORTING THE FONTS FROM GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@500&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- IMPORTING JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+<body>
+    <div class="section-1">
+        <div class="background-image">       
+        </div>
+        <h1 align="center" class="heading">Live Weather Forecast</h1>
+        <div class="container">
+            <div class="search-box">
+                <form action="/" method="post">
+                    <input size=25 autocomplete="off" type="text" name="cityName" placeholder="Search">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+                <p>Type in a City Name to Fetch Weather Details.<br><span class="tip">(Open this Site on a Desktop to Enjoy Full Experience)</span></p>
+            </div>
+            <div class="current-weather">
+                <div class="current-content">
+                    <h3><%= nameofcity %></h3>
+                    <p class="day-date"><%= todaysdate %>, <span class="citytime"><%= timeofcity %></span></p>
+                    <h1 class="temp"><%= temperature %>°C</h1>
+                    <div class="weather-description">
+                        <img src="<%= iconlink %>" alt="">
+                        <p><%= weatherDescription %></p>
+                    </div>
+                    <p>Humidity: <%= humidityvalue %>%</p>
+                    <p>Wind Speed: <%= windspeedvalue %> m/s</p>
+                </div>
+            </div>
+            <div class="future-weather">
+                <div class="future-weather-content">
+                    <h4>Weather next 7 Days</h4>
+                    <div class="one">
+                        <img src="<%= iconlink1 %>" alt="">
+                        <p><%= tempvalue1 %>°C</p>
+                        <p><%= weatherDescription1 %></p>
+                        <p><%= dayname1 %></p>
+                    </div>
+                    <div class="two">
+                        <img src="<%= iconlink2 %>" alt="">
+                        <p><%= tempvalue2 %>°C</p>
+                        <p><%= weatherDescription2 %></p>
+                        <p><%= dayname2 %></p>
+                    </div>
+                    <div class="three">
+                        <img src="<%= iconlink3 %>" alt="">
+                        <p><%= tempvalue3 %>°C</p>
+                        <p><%= weatherDescription3 %></p>
+                        <p><%= dayname3 %></p>
+                    </div>
+                    <div class="four">
+                        <img src="<%= iconlink4 %>" alt="">
+                        <p><%= tempvalue4 %>°C</p>
+                        <p><%= weatherDescription4 %></p>
+                        <p><%= dayname4 %></p>
+                    </div>
+                    <div class="five">
+                        <img src="<%= iconlink5 %>" alt="">
+                        <p><%= tempvalue5 %>°C</p>
+                        <p><%= weatherDescription5 %></p>
+                        <p><%= dayname5 %></p>
+                    </div>
+                    <div class="six">
+                        <img src="<%= iconlink6 %>" alt="">
+                        <p><%= tempvalue6 %>°C</p>
+                        <p><%= weatherDescription6 %></p>
+                        <p><%= dayname6 %></p>
+                    </div>
+                    <div class="seven">
+                        <img src="<%= iconlink7 %>" alt="">
+                        <p><%= tempvalue7 %>°C</p>
+                        <p><%= weatherDescription7 %></p>
+                        <p><%= dayname7 %></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="section-2">
+        <div class="footer-content">
+            <p>Website Coded & Designed by <a href="https://asadparkar.me">Asad Parkar</a></p>
+            <p>Asad Parkar 2022 © All Copyrights reserved</p>
+            <p>Note: This website has been uniquely designed by the developer. If used commercially or academically anywhere without contacting the owner, copyright actions will be taken</p>
+        </div>
+    </div>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

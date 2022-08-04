@@ -1,0 +1,348 @@
+body{
+    /* background-image: linear-gradient(to right, #00D7FF , #1F4690); */
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding: 0;
+}
+.section-1{
+    width: 100%;
+    height: 100vh;
+}
+
+.background-image{
+    width:100%;
+    height: 100vh;
+    background-image: url("https://wallpapercave.com/wp/wp755089.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Ubuntu', sans-serif;
+    position: fixed;
+    z-index: -10;
+    top:-10px;
+    filter: blur(5px);
+}
+.heading{
+    margin-top:2rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    color:#00D7FF;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+/* START OF SEARCH BOX CSS */
+.search-box{
+    margin-top:2rem;
+    text-align: center;
+}
+.search-box input{
+    border-radius: 5rem;
+    border: none;
+    outline:none;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 3rem;
+    margin-right: 1rem;
+    width: 20rem;
+}
+.search-box input::placeholder{
+    padding-left:1rem;
+}
+.search-box input:focus{
+    color:white;
+    /* text-align: center; */
+    padding-left: 1rem;
+}
+.search-box button{
+    outline: none;
+    border: none;
+    opacity: 0.5;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color:white;
+    height: 2rem;
+}
+.search-box p{
+    color:white;
+    margin-top: 40%;
+    display: none;
+}
+.search-box button:hover{
+    opacity: 1;
+}
+.tip{
+    color:#DF7861;
+    font-size: 10px;
+    margin-top:10%;
+    visibility: hidden;
+}
+@media only screen and (max-width: 600px) {
+    .search-box input{
+        margin-bottom: 15px;
+    }
+    .background-image{
+        height: 150vh;
+    }
+    .heading{
+        font-size: 40px;
+    }
+    .search-box p{
+        display: block;
+    }
+    .search-box button{
+        width: 60px;
+    }
+    .tip{
+        visibility: visible;
+    }
+
+}
+/* END OF SEARCH BOX CSS --------------------------------------- */
+
+/* START OF CURRENT WEATHER CSS */
+.current-weather{
+    width: 25rem;
+    height: 19rem;
+    background-color: #100F0F;
+    opacity: 0.8;
+    border-radius: 10px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin: -150px 0 0 -220px;
+    font-weight: 300;
+    transition:all 0.5s;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+.current-weather:hover{
+    transform: skew(-5deg);
+    box-shadow: 20px 20px 5px;
+    transition: all 0.5s;
+}
+.current-weather h3{
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.current-content{
+    opacity: 1;
+    position: relative;
+    color:white;
+    margin:10px;
+    margin: 1rem;
+}
+.day-date{
+    font-weight: 500;
+    color:#DF7861;
+}
+.temp{
+    margin-top:20px;
+    color:#0096FF;
+    font-size: 50px;
+}
+.current-content img{
+    width: 15%;
+}
+.weather-description p{
+    margin-top:15px;
+    font-size: 20px;
+}
+.weather-description{
+    display: flex;
+    font-weight: 100;
+}
+
+@media only screen and (max-width: 600px) {
+    .current-weather{
+        top:70%;
+        width: 20rem;
+        left:65%;
+        margin-top: 5rem;
+    }
+}
+/* END OF CURRENT WEATHER--------------------------------------------------- */
+
+/* START OF 7 DAY WEATHER FORECAST */
+.future-weather{
+    width: 100%;
+    height: 8.8rem;
+    background-color: black;
+    margin-top:35%;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+.future-weather-content{
+    opacity: 1;
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.future-weather-content{
+    color:white;
+}
+.future-weather-content p{
+    margin-top: -20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.future-weather-content p:nth-child(4){
+    font-weight: 900;
+}
+.future-weather-content p:nth-child(3){
+    margin-bottom: 27px;
+}
+.future-weather-content p:nth-child(2){
+    color:#0096FF;
+    font-weight: 700;
+}
+.future-weather img{
+    width: 80px;
+    text-align: center;
+}
+.future-weather-content h4{
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .future-weather{
+        margin-top:200%;
+    }
+    .future-weather{
+        visibility: hidden;
+\    }
+    .future-weather-content{
+        visibility: visible;
+        flex-direction: column;
+        align-items: center;
+\    }
+    .future-weather img{
+        text-align: right;
+    }
+    .future-weather-content h4{
+        display: block;
+        font-weight: 700;
+    }
+}
+
+/* RESPONSIVE FOR SMALL LAPTOPS */
+@media screen and (min-device-width: 1000px) and (max-device-width: 1500px) { 
+    .future-weather{
+        margin-top: 50%;
+    }
+}
+
+
+/* END OF FUTURE WEATHER ----------------- */
+
+/* START OF THE FOOTER */
+.section-2{
+    margin-top:10%;
+    width: 100%;
+    height: 20vh;
+    background-color: #100F0F;
+    opacity: 0.7;
+}
+.footer-content{
+    opacity: 1;
+    color:white;
+    padding-top: 10px;
+}
+.footer-content p{
+    text-align: center;
+}
+.footer-content p:last-child{
+    color:red;
+    font-size:13px;
+}
+@media screen and (max-width: 600px) {
+    .section-2{
+        margin-top: 400%;
+        height: 22vh;
+    }
+    .footer-content p:last-child{
+        font-size:10px;
+    }
+    
+}
+/* ---------------------------------------------------------------------------------------- */
+
+/* LOADING SCREEN ANIMATION */
+body, html {
+    height: 100%;
+    text-align: center;
+}
+
+body {
+  background-color: #242F3F;
+}
+
+.loader-wrapper{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: #242f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
